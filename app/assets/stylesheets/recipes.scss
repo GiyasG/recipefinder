@@ -2,12 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.center {
-  align-content: center;
-}
-
 table {
   border-collapse: collapse;
+  margin: 0 auto;
+  text-align: left;
+  font: Arial
 }
 
 td {
@@ -22,7 +21,16 @@ td {
   background-color: lightblue;
 }
 
-table img {
-  width: 150px;
-  height: auto;
+.center {
+  text-align: center;
 }
+
+.tabletitle {
+  background-color: lightyellow;
+  text-align: center;
+}
+
+// table img {
+//   width: 150px;
+//   height: auto;
+// }

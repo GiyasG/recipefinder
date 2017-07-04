@@ -1,4 +1,5 @@
 
+<div class=<%= 'center' %> >
 <h1>Searching for - <%= @search_term %></h1>
 
 <% if @recipes.nil? %>
@@ -6,20 +7,19 @@
 <p>No recipes, Sorry ...</p>
 
 <% else %>
-<div class="center">
 <table border="0">
-  <tr>
+  <tr class=<%= 'tabletitle' %> >
   	<th>Image</th>
   	<th>Name</th>
   	<th>Description</th>
   </tr>
   <% @recipes.each do |recipe| %>
     <tr class=<%= cycle('even', 'odd') %> >
-      <td><%= link_to image_tag(recipe["image_url"]), recipe["f2f_url"]%></td>
-      <td><%= link_to sanitize(recipe["title"]), recipe["source_url"] %></td>
+      <td><%= link_to image_tag(recipe["image_url"], size: "100x100"), recipe["f2f_url"], target: "_blank"%></td>
+      <td><%= link_to sanitize(recipe["title"]), recipe["source_url"], target: "_blank" %></td>
       <td><%= recipe["social_rank"] %></td>
     </tr>
   <% end %>
 </table>
-</div>
 <% end %>
+</div>
